@@ -1,0 +1,270 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Light Mode */
+body.light-mode {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    color: #333;
+}
+
+/* Main Container */
+#main_container {
+    text-align: center;
+    padding: 40px 20px;
+    z-index: 2;
+}
+
+#heading {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Buttons for Dark and Light Mode */
+.btn_dark_mode, .btn_dark_mode:focus, .btn_dark_mode:active {
+    border: 1px solid #ffffff;
+    padding: 8px 20px;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn_dark_mode:hover {
+    background-color: #2a5298;
+}
+
+/* Search Bar Styling */
+#search_bar {
+    margin-top: 30px;
+}
+
+#search_input {
+    border: none;
+    padding: 10px;
+    width: 50%;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 1rem;
+    outline: none;
+}
+
+#search_input:focus {
+    box-shadow: 0 0 5px #2a5298;
+}
+
+#search_btn {
+    padding: 10px 20px;
+    background-color: #2a5298;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#search_btn:hover {
+    background-color: #1e3c72;
+}
+
+/* Weather Card Styling */
+.weather_card {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 350px;
+    margin: 20px auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.weather_card:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.weather-icon {
+    max-width: 80px;
+}
+
+.temp_display {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+/* Future Forecast Cards */
+.future-weather-card {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.future-weather-card:hover {
+    transform: scale(1.05);
+}
+
+.future-weather-card .card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.card-text {
+    font-size: 1rem;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+/* Button for Temperature Units */
+#converter {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#degree_celsius, #fahreinheit {
+    padding: 10px 15px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+#degree_celsius:hover, #fahreinheit:hover {
+    background-color: #2a5298;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #search_input {
+        width: 70%;
+    }
+
+    .weather_card, .future-weather-card {
+        width: 90%;
+    }
+
+    #heading {
+        font-size: 2.5rem;
+    }
+
+    #search_btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background: linear-gradient(135deg, #2a5298, #1e3c72);
+    color: white;
+}
+
+body.dark-mode .weather_card, body.dark-mode .future-weather-card {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode #search_input {
+    background-color: #333;
+    color: white;
+}
+
+body.dark-mode #search_btn {
+    background-color: #1e3c72;
+}
+
+/* Smooth Transition */
+body, .weather_card, .future-weather-card {
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* Footer Styles */
+.footer {
+    background-color: #173555;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 14px;
+   
+    bottom: 0;
+    width: 100%;
+}
+
+.footer .container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+
+.footer .col-12 {
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer .social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer .social-links li {
+    margin: 0 10px;
+}
+
+.footer .social-links .social-icon {
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer .social-links .social-icon:hover {
+    color: #17a2b8;
+}
+
+/* Responsiveness */
+@media (max-width: 576px) {
+    
+    .footer .social-links {
+        justify-content: center;
+    }
+}
+
